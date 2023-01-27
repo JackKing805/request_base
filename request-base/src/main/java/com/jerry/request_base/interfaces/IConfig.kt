@@ -11,7 +11,7 @@ import java.lang.reflect.Method
  * 配置注册类，需要搭配ConfigRegister 注解同时使用
  */
 abstract class IConfig {
-    abstract fun init(annotation: Configuration, clazz: Class<*>)
+    abstract fun init(annotation: Configuration, clazz: Any)
 
     abstract fun onRequest(context: Context,request: Request,response: IResponse,controllerMapper: ControllerMapper?):Boolean
 

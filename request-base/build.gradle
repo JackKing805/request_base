@@ -26,7 +26,7 @@ android {
 dependencies {
     implementation 'androidx.core:core-ktx:1.9.0'
     //rt
-    implementation 'com.github.JackKing805:RtCore:0.1.8'
+    implementation 'com.github.JackKing805:RtCore:0.2.0'
 }
 
 afterEvaluate {
@@ -36,7 +36,7 @@ afterEvaluate {
                 from components.release
                 groupId = "com.jerry"
                 artifactId = "request-base"
-                version = "0.0.5"
+                version = "0.0.6"
             }
         }
     }
