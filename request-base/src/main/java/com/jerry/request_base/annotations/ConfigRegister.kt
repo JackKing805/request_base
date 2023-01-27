@@ -1,6 +1,5 @@
 package com.jerry.request_base.annotations
 
-import java.lang.annotation.Inherited
 import kotlin.reflect.KClass
 
 /**
@@ -8,7 +7,7 @@ import kotlin.reflect.KClass
  */
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)
-@Inherited
+@Inject
 annotation class ConfigRegister(
   val priority:Int = 0,
   val registerClass:KClass<*> = Any::class

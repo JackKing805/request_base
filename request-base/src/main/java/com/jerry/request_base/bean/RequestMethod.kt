@@ -1,4 +1,4 @@
-package com.jerry.request_base.annotations
+package com.jerry.request_base.bean
 
 enum class RequestMethod(val content:String) {
     GET("GET"),

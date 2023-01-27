@@ -1,6 +1,6 @@
 package com.jerry.request_base.annotations
 
-import com.jerry.request_base.annotations.RequestMethod
+import com.jerry.request_base.bean.RequestMethod
 import java.lang.annotation.Inherited
 
 
