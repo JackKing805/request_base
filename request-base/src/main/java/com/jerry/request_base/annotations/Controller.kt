@@ -6,7 +6,7 @@ import java.lang.annotation.Inherited
 
 @Target(AnnotationTarget.CLASS,AnnotationTarget.FUNCTION)
 @Retention(AnnotationRetention.RUNTIME)
-@Inherited
+@Bean
 annotation class Controller(
     val value:String="",
     val requestMethod: RequestMethod = RequestMethod.GET,

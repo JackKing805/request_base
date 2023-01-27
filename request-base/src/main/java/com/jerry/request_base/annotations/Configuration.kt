@@ -6,5 +6,5 @@ package com.jerry.request_base.annotations
  */
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)
-@Inject
+@Bean
 annotation class Configuration

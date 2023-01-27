@@ -7,7 +7,7 @@ import kotlin.reflect.KClass
  */
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)
-@Inject
+@Bean
 annotation class ConfigRegister(
   val priority:Int = 0,
   val registerClass:KClass<*> = Any::class
