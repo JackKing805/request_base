@@ -16,5 +16,5 @@ abstract class IConfig {
 
     abstract fun onRequestPre(context: Context, request: Request, response: Response, IConfigControllerMapper: IConfigControllerMapper?):Boolean
 
-    abstract fun onRequestEnd(context: Context,request: Request,response: Response)
+    abstract fun onRequestEnd(context: Context,request: Request,response: Response) :Boolean
 }
