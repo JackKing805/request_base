@@ -4,19 +4,17 @@ import android.content.Context
 import com.jerry.rt.core.http.pojo.Request
 import com.jerry.rt.core.http.pojo.Response
 import com.jerry.request_base.annotations.Configuration
-import com.jerry.rt.core.http.pojo.s.IResponse
-import java.lang.reflect.Method
+import com.jerry.request_base.bean.IConfigControllerMapper
 
 /**
  * 配置注册类，需要搭配ConfigRegister 注解同时使用
  */
 abstract class IConfig {
+    abstract fun onCreate()
+
     abstract fun init(annotation: Configuration, clazz: Any)
 
-    abstract fun onRequest(context: Context,request: Request,response: IResponse,controllerMapper: ControllerMapper?):Boolean
+    abstract fun onRequestPre(context: Context, request: Request, response: Response, IConfigControllerMapper: IConfigControllerMapper?):Boolean
 
-    data class ControllerMapper(
-        val instance:Any,
-        val method:Method
-    )
+    abstract fun onRequestEnd(context: Context,request: Request,response: Response)
 }
