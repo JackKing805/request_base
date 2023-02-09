@@ -4,7 +4,7 @@ import android.content.Context
 import com.jerry.rt.core.http.pojo.Request
 import com.jerry.rt.core.http.pojo.Response
 import com.jerry.request_base.annotations.Configuration
-import com.jerry.request_base.bean.ControllerMapper
+import com.jerry.request_base.bean.ControllerReferrer
 import com.jerry.request_base.bean.ControllerResult
 
 /**
@@ -15,7 +15,7 @@ abstract class IConfig {
 
     abstract fun init(annotation: Configuration, clazz: Any)
 
-    abstract fun onRequestPre(context: Context, request: Request, response: Response, controllerMapper: ControllerMapper?):Boolean
+    abstract fun onRequestPre(context: Context, request: Request, response: Response, controllerReferrer: ControllerReferrer?):Boolean
 
-    abstract fun onRequestEnd(context: Context, request: Request, response: Response, controllerResult: ControllerResult?) :Boolean
+    abstract fun onRequestEnd(context: Context, request: Request, response: Response, controllerResult: ControllerResult) :Boolean
 }
