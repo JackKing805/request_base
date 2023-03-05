@@ -9,6 +9,6 @@ import kotlin.reflect.KClass
 @Retention(AnnotationRetention.RUNTIME)
 @Bean
 annotation class ConfigRegister(
-  val priority:Int = 0,
+  val priority:Int = 0,//优先级，数字越大越先被调用
   val registerClass:KClass<*> = Any::class
 )
