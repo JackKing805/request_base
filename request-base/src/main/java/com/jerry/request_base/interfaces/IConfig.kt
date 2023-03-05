@@ -40,7 +40,7 @@ open class IConfig {
     }
 
     //rt协议消息进入
-    open fun onRtMessage(client: Client,request: Request,response: Response):Boolean{
+    open fun onRtMessage(request: Request,response: Response):Boolean{
         return true
     }
 
