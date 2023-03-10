@@ -35,7 +35,7 @@ open class IConfig {
 
 
     //rt协议链接
-    open fun onRtIn(client: Client,response: Response):Boolean{
+    open fun onRtIn(client: Client,request: Request,response: Response):Boolean{
         return true
     }
 
@@ -45,7 +45,7 @@ open class IConfig {
     }
 
     //rt协议断开链接
-    open fun onRtOut(client: Client,response: Response):Boolean{
+    open fun onRtOut(client: Client):Boolean{
         return true
     }
 }
