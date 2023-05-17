@@ -8,6 +8,7 @@ import com.jerry.request_base.bean.ControllerReferrer
 import com.jerry.request_base.bean.ControllerResult
 import com.jerry.request_base.bean.ResourceReferrer
 import com.jerry.rt.core.http.Client
+import com.jerry.rt.core.http.pojo.RtClient
 
 /**
  * 配置注册类，需要搭配ConfigRegister 注解同时使用
@@ -35,7 +36,7 @@ open class IConfig {
 
 
     //rt协议链接
-    open fun onRtIn(client: Client,request: Request,response: Response):Boolean{
+    open fun onRtIn(client: RtClient,request: Request,response: Response):Boolean{
         return true
     }
 
@@ -45,7 +46,7 @@ open class IConfig {
     }
 
     //rt协议断开链接
-    open fun onRtOut(client: Client):Boolean{
+    open fun onRtOut(client: RtClient):Boolean{
         return true
     }
 }
