@@ -36,17 +36,17 @@ open class IConfig {
 
 
     //rt协议链接
-    open fun onRtIn(client: RtClient,request: Request,response: Response):Boolean{
+    open fun onRtIn(context: Context,client: RtClient,request: Request,response: Response):Boolean{
         return true
     }
 
     //rt协议消息进入
-    open fun onRtMessage(request: Request,response: Response):Boolean{
+    open fun onRtMessage(context: Context,client: RtClient,request: Request,response: Response):Boolean{
         return true
     }
 
     //rt协议断开链接
-    open fun onRtOut(client: RtClient):Boolean{
+    open fun onRtOut(context: Context,client: RtClient):Boolean{
         return true
     }
 }
